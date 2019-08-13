@@ -10,10 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_12_141718) do
+ActiveRecord::Schema.define(version: 2019_08_13_084959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "rioter_id"
+    t.datetime "start"
+    t.datetime "end"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rioter_id"], name: "index_bookings_on_rioter_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "rioter_id"
+    t.integer "rating"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rioter_id"], name: "index_reviews_on_rioter_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "rioters", force: :cascade do |t|
+    t.string "name"
+    t.boolean "availability", default: true, null: false
+    t.float "rate"
+    t.string "picture"
+    t.text "description"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_rioters_on_user_id"
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.bigint "rioter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rioter_id"], name: "index_skills_on_rioter_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +70,10 @@ ActiveRecord::Schema.define(version: 2019_08_12_141718) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "rioters"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "reviews", "rioters"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "rioters", "users"
+  add_foreign_key "skills", "rioters"
 end

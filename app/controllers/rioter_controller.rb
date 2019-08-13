@@ -1,0 +1,2 @@
+class RioterController < ApplicationController
+end
