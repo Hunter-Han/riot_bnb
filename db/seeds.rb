@@ -15,8 +15,8 @@ Rioter.destroy_all
 Booking.destroy_all
 Review.destroy_all
 
-user_needing_rioter = User.create!(email: 'spm471@nyu.edu', encrypted_password: '123456')
-user_rioter = User.create!(email: 'sebamatera3@gmail.com', encrypted_password: '123456')
+user_needing_rioter = User.create!(email: 'spm471@nyu.edu', password: '123456')
+user_rioter = User.create!(email: 'sebamatera3@gmail.com', password: '123456')
 
 
 rioter1 = Rioter.new(
