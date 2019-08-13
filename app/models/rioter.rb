@@ -7,6 +7,6 @@ class Rioter < ApplicationRecord
   validates :name, presence: true
   validates :availability, presence: true
   validates :rate, presence: true
-  validates :picture, presence: true
+  mount_uploader :picture, PictureUploader
   validates :description, presence: true
 end
