@@ -1,4 +1,4 @@
-class RioterController < ApplicationController
+class RiotersController < ApplicationController
   def index
     @rioters = Rioter.all
   end

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :user, :rioter, :skill, :booking, :review
+  resources :rioters
+  resources :skills
+  resources :bookings
+  resources :reviews
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
