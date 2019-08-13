@@ -1,5 +1,5 @@
 class Rioter < ApplicationRecord
-  has_many :skills
+  has_many :rioter_skills, dependent: :destroy
   has_many :bookings, dependent: :destroy
   has_many :reviews, dependent: :destroy
   belongs_to :user

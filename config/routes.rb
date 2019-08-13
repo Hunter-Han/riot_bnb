@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   resources :rioters
-  resources :skills
+  resources :skills do
+    resources :rioter_skills, only: [:create]
+  end
   resources :bookings
   resources :reviews
+
 
   root to: 'rioters#index'
 
