@@ -4,7 +4,6 @@ class BookingController < ApplicationController
   end
 
   def new
-    # we need @booking in our `simple_form_for`
     @rioter = Rioter.find(params[:rioter_id])
     @user = User.find(params[:user_id])
     @booking = Booking.new
@@ -12,10 +11,27 @@ class BookingController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    # we need `booking_id` to asssociate review with corresponding booking
-    @booking.user = user.find(params[:user_id])
-    @booking.rioter = rioter.find(params[:rioter_id])
+    @booking.user = User.find(params[:user_id])
+    @booking.rioter = Rioter.find(params[:rioter_id])
     @booking.save
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(params[:booking])
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
   end
 
   private
