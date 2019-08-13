@@ -13,6 +13,7 @@ url = 'https://i.kym-cdn.com/entries/icons/facebook/000/006/131/angry_asian.jpg'
 User.destroy_all
 Rioter.destroy_all
 Booking.destroy_all
+Review.destroy_all
 
 user_needing_rioter = User.create!(email: 'spm471@nyu.edu', encrypted_password: '123456')
 user_rioter = User.create!(email: 'sebamatera3@gmail.com', encrypted_password: '123456')
