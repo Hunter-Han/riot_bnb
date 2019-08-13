@@ -7,8 +7,9 @@
   <div class="row justify-content-center">
     <div class="col-6">
       <% @rioters.each do |rioter| %>
-        <h2><%= rioter.name %></h2>
+        <%= render 'shared/rioter-card', rioter: rioter %>
       <% end %>
-    </div>
-  </div>
-</div>
+    </div> <!-- closing column -->
+  </div> <!-- closing row -->
+</div> <!-- closing container -->
+
