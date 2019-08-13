@@ -36,7 +36,7 @@ class BookingController < ApplicationController
 
   private
 
-  def review_params
+  def booking_params
     params.require(:booking).permit(:start, :end, :location)
   end
 end
