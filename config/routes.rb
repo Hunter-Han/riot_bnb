@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  resources :rioters
+  resources :rioters do
+    resources :bookings, only: [:create]
+  end
   resources :skills do
     resources :rioter_skills, only: [:create]
   end
-  resources :bookings
   resources :reviews
 
 

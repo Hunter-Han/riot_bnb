@@ -5,6 +5,7 @@ class RiotersController < ApplicationController
 
   def show
     @rioter = Rioter.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
