@@ -1,27 +1,30 @@
-_rioter-card.scss
 
-.card-product {
+
+a .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 150px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: left;
 }
 
-.card-product img {
+a .card-product img {
   height: 100%;
   width: 120px;
   object-fit: cover;
 }
 
-.card-product h2 {
-  font-size: 16px;
+a .card-product h2 {
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-product p {
+a .card-product p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
@@ -29,6 +32,10 @@ _rioter-card.scss
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
+a .card-product .card-product-infos {
   padding: 16px;
+}
+
+a .span {
+  font-size: 12px;
 }

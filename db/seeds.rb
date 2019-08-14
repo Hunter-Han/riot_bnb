@@ -1,4 +1,4 @@
-r# This file should contain all the record creation needed to seed the database with its default values.
+# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -19,12 +19,12 @@ user_rioter = User.create!(email: 'sebamatera3@gmail.com', password: '123456')
 
 molotov = Skill.new(name: 'Molotov throwing')
 jacking = Skill.new(name: 'Carjacking')
-Skill.create(name: 'Window breaking')
-Skill.create(name: 'Tear gas resistance')
-Skill.create(name: 'Thick bones')
-Skill.create(name: 'Fast as fuck')
-Skill.create(name: 'Looks cool')
-Skill.create(name: 'Hates police')
+Skill.create!(name: 'Window breaking')
+Skill.create!(name: 'Tear gas resistance')
+Skill.create!(name: 'Thick bones')
+Skill.create!(name: 'Fast as fuck')
+Skill.create!(name: 'Looks cool')
+Skill.create!(name: 'Hates police')
 
 rioter1 = Rioter.new(
   name: Faker::Name.name,
@@ -32,11 +32,11 @@ rioter1 = Rioter.new(
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_1 = RioterSkill.new(
+rioter_skill_1 = RioterSkill.create!(
   rioter: rioter1,
   skill: molotov
   )
-rioter_skill_1_1 = RioterSkill.new(
+rioter_skill_1_1 = RioterSkill.create!(
   rioter: rioter1,
   skill: jacking
   )
@@ -47,7 +47,7 @@ rioter2 = Rioter.new(
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_2 = RioterSkill.new(
+rioter_skill_2 = RioterSkill.create!(
   rioter: rioter2,
   skill: Skill.all.sample
   )
@@ -58,7 +58,7 @@ rioter3 = Rioter.new(
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_3 = RioterSkill.new(
+rioter_skill_3 = RioterSkill.create!(
   rioter: rioter3,
   skill: Skill.all.sample
   )
@@ -69,7 +69,7 @@ rioter4 = Rioter.new(
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_4 = RioterSkill.new(
+rioter_skill_4 = RioterSkill.create!(
   rioter: rioter4,
   skill: Skill.all.sample
   )
@@ -80,7 +80,7 @@ rioter5 = Rioter.new(
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_5 = RioterSkill.new(
+rioter_skill_5 = RioterSkill.create!(
   rioter: rioter5,
   skill: Skill.all.sample
   )
@@ -91,7 +91,7 @@ rioter6 = Rioter.new(
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_6 = RioterSkill.new(
+rioter_skill_6 = RioterSkill.create!(
   rioter: rioter6,
   skill: Skill.all.sample
   )
@@ -102,7 +102,7 @@ rioter7 = Rioter.new(
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_7 = RioterSkill.new(
+rioter_skill_7 = RioterSkill.create!(
   rioter: rioter7,
   skill: Skill.all.sample
   )
@@ -113,15 +113,26 @@ rioter8 = Rioter.new(
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_8 = RioterSkill.new(
+rioter_skill_8 = RioterSkill.create!(
   rioter: rioter8,
+  skill: Skill.all.sample
+  )
+
+rioter9 = Rioter.new(
+  name: Faker::Name.name,
+  rate: [1, 2, 3, 4, 5].shuffle.first,
+  description: Faker::Books::Dune.quote,
+  user: user_rioter
+  )
+rioter_skill_9 = RioterSkill.create!(
+  rioter: rioter9,
   skill: Skill.all.sample
   )
 
 rioter1.remote_picture_url = 'https://i.kym-cdn.com/entries/icons/facebook/000/006/131/angry_asian.jpg'
 rioter1.save!
 
-rioter2.remote_picture_url = 'https://i.pinimg.com/originals/09/57/7a/09577a766f8891e7c304ebbc2b33db97.jpg'
+rioter2.remote_picture_url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ7a8cghfD502RSrQQGTL3S6R4esxzlmB14vZBcX47zoG_jugWUA'
 rioter2.save!
 
 rioter3.remote_picture_url = 'https://i.pinimg.com/originals/09/57/7a/09577a766f8891e7c304ebbc2b33db97.jpg'
@@ -141,6 +152,9 @@ rioter7.save!
 
 rioter8.remote_picture_url = 'https://previews.123rf.com/images/elnur/elnur1110/elnur111001891/10968758-man-with-noose-around-his-neck.jpg'
 rioter8.save!
+
+rioter9.remote_picture_url = 'https://vote.union.ic.ac.uk/photos/aa17717-15503.jpg'
+rioter9.save!
 
 Booking.create(location: Faker::Address.city, start: DateTime.new(2019, 8, 1, 8), end: DateTime.new(2019, 8, 1, 17), user: user_needing_rioter, rioter: rioter1)
 

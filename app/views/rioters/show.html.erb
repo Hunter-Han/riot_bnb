@@ -6,15 +6,28 @@
     <%= image_tag "anonymous-avatar.png" %>
   <% end %>
   </div>
-    <div class="card-product-infos">
-  <h2> <%= @rioter.name %></h2>
+    <div class="container">
+  <h2> <strong> <%= @rioter.name %></strong></h2>
     <p> <%= @rioter.description %></p>
-      <br>
-      <h3> <strong><%= @rioter.rate %><strong></h3>
+    <h3><strong>Skills:</strong></h3>
+    <% @rioter.skills.each do |skill| %>
+      <h4><%= skill.name %></h4>
+    <%end%>
+  <br>
+      <h3> <strong> Price: £<%= @rioter.rate %></strong> (per hour)</h3>
+        <h4><strong>Price Scale: </strong><% @rioter.rate.to_i.times do %>
+          <a href="https://www.freeiconspng.com/img/32943" title="Image from freeiconspng.com"><img class="fist" src="https://www.freeiconspng.com/uploads/fist-png-23.png" alt="Png Download Fist Clipart" /></a>
+        <% end  %>
+      </h4>
     </div>
 </div>
+<br>
+<br>
 
-<h1>Book a Rioter</h1>
+<h1 class="cock">Book a Rioter</h1>
+<br>
+<div class="cock">
+<div>
 <%= simple_form_for [@rioter, @booking] do |f| %>
   <%= f.input :location %>
   <%= f.input :start %>
@@ -22,5 +35,7 @@
 
   <%= f.submit %>
 <% end %>
-
+<br>
 <%= link_to "Back to list", root_path %>
+</div>
+</div>

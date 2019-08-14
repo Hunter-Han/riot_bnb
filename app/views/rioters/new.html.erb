@@ -1,0 +1,16 @@
+<%= simple_form_for [@rioter] do |f| %>
+  <% if @rioter.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @restaurant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :picture %>
+  <%= f.submit "submit", class: "btn btn-primary" %>
+<% end %>
+
