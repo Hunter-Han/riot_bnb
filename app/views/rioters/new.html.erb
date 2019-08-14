@@ -1,16 +1,30 @@
-<%= simple_form_for [@rioter] do |f| %>
-  <% if @rioter.errors.any? %>
-    <div class="errors-container">
-      <ul>
-        <% @restaurant.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :picture %>
-  <%= f.submit "submit", class: "btn btn-primary" %>
-<% end %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/d8/images/methode/2019/07/28/a04f6bfa-b06d-11e9-a61f-bc570b50c4e7_image_hires_143104.jpg?itok=DrndUyic&v=1564295474)">
+
+</div>
+
+
+</div>
+  <div class='container margin-top' >
+    <h1> Who will you riot with...</h1>
+    <br>
+    <%= simple_form_for [@rioter] do |f| %>
+      <% if @rioter.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @restaurant.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :name %>
+
+      <%= f.association :skills %>
+      <%= f.input :rate %>
+      <%= f.input :description %>
+      <%= f.input :picture %>
+      <%= f.submit "submit", class: "btn btn-secondary" %>
+    <% end %>
+  </div>
+</div>
 
