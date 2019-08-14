@@ -1,10 +1,17 @@
-<div>
-<div>
-<%=@rioter.picture%>
-</div>
-<div>
-<%=@rioter.name%>
-</div>
+<div class="card-picture">
+  <div>
+  <% if @rioter.picture %>
+   <%= cl_image_tag @rioter.picture %>
+  <% else %>
+    <%= image_tag "anonymous-avatar.png" %>
+  <% end %>
+  </div>
+    <div class="card-product-infos">
+  <h2> <%= @rioter.name %></h2>
+    <p> <%= @rioter.description %></p>
+      <br>
+      <h3> <strong><%= @rioter.rate %><strong></h3>
+    </div>
 </div>
 
 <h1>Book a Rioter</h1>
@@ -16,4 +23,4 @@
   <%= f.submit %>
 <% end %>
 
-<%= link_to "Back to list", restaurants_path %>
+<%= link_to "Back to list", root_path %>

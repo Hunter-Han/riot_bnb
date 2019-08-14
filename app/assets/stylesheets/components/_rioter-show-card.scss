@@ -1,0 +1,14 @@
+.card-picture {
+  margin-top: 85px;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+}
+
+.card-picture .container {
+  padding: 20px;
+}
