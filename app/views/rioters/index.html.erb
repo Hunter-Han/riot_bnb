@@ -4,12 +4,16 @@
 </div>
 
 <div class="index-page-wrapper">
+  <h2><strong>Available Rioters</strong></h2>
+  <br>
 <div class="container">
   <div class="row justify-content-center ">
       <% @rioters.each do |rioter| %>
-      <div class="col-4 margin-bottom">
-        <%= render 'shared/rioter-card', rioter: rioter %>
-        </div> <!-- closing column -->
+          <div class="col-4 margin-bottom">
+          <%= link_to rioter_path(rioter) do %>
+            <%= render 'shared/rioter-card', rioter: rioter %>
+          <% end %>
+          </div> <!-- closing column -->
       <% end %>
 
       <br>
