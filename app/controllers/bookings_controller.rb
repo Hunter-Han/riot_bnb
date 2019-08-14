@@ -5,13 +5,13 @@ class BookingsController < ApplicationController
 
   def new
     @rioter = Rioter.find(params[:rioter_id])
-    @user = User.find(params[:user_id])
+    @user = current_user
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = User.find(params[:user_id])
+    @booking.user = current_user
     @booking.rioter = Rioter.find(params[:rioter_id])
     @booking.save
   end
