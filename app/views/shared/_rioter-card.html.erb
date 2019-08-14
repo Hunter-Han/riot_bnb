@@ -1,14 +1,19 @@
 <%#= link_to , EACH RIOTER'S SHOW PAGE %>
+
 <div class="card-product">
-  <% if rioter.picture %>
-    <%= cl_image_tag rioter.picture %>
+
+  <% if rioter.picture? %>
+    <%= cl_image_tag rioter.picture, height: 300, width: 350 %>
   <% else %>
     <%= image_tag "anonymous-avatar.png" %>
   <% end %>
-    <div class="card-product-infos">
-  <h2> <%= rioter.name %></h2>
-    <p> <%= rioter.description %></p>
-      <br>
-      <h3> <strong><%= rioter.rate %><strong></h3>
-    </div>
+
+  <div class="card-product-infos">
+    <h2> <%= rioter.name %> </h2>
+    <p> <%= rioter.description %> </p>
+
+    <h3> <strong> <%= rioter.rate %>  </strong> </h3>
+  </div>
+
+
 </div>

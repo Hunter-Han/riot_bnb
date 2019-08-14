@@ -3,13 +3,18 @@
   <h1>RIOTER</h1>
 </div>
 
+<div class="index-page-wrapper">
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
+  <div class="row justify-content-center ">
       <% @rioters.each do |rioter| %>
+      <div class="col-4 margin-bottom">
         <%= render 'shared/rioter-card', rioter: rioter %>
+        </div> <!-- closing column -->
       <% end %>
-    </div> <!-- closing column -->
+
+      <br>
+
+
   </div> <!-- closing row -->
 </div> <!-- closing container -->
-
+</div>

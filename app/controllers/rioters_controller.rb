@@ -9,14 +9,15 @@ class RiotersController < ApplicationController
 
   def new
     @rioter = Rioter.new
-    @user = User.find(params[:user_id])
+    @user = current_user
   end
 
   def create
     @rioter = Rioter.new(rioter_params)
-    @rioter.user = User.find(params[:user_id])
+    @rioter.user = current_user
     @rioter.save
-    #needs a redirection
+
+    redirect_to root_path(@rioter)
   end
 
   def edit
