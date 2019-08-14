@@ -1,12 +1,10 @@
 <div class="card-picture">
-  <div>
   <% if @rioter.picture %>
-   <%= cl_image_tag @rioter.picture %>
+   <%= cl_image_tag @rioter.picture, class: "picturizer" %>
   <% else %>
-    <%= image_tag "anonymous-avatar.png" %>
+    <%= image_tag "anonymous-avatar.png", class: "picturizer" %>
   <% end %>
-  </div>
-    <div class="container">
+    <div class="bloxy">
   <h2> <strong> <%= @rioter.name %></strong></h2>
     <p> <%= @rioter.description %></p>
     <h3><strong>Skills:</strong></h3>
