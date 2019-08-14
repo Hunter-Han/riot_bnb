@@ -25,109 +25,163 @@ Skill.create!(name: 'Thick bones')
 Skill.create!(name: 'Fast as fuck')
 Skill.create!(name: 'Looks cool')
 Skill.create!(name: 'Hates police')
+Skill.create!(name: 'Graffiti artist')
+Skill.create!(name: 'Expert marksman')
+Skill.create!(name: 'Tough guy')
+
+skill_array = Skill.all.sample(3)
+counter = 0
 
 rioter1 = Rioter.new(
   name: Faker::Name.name,
-  rate: [1, 2, 3, 4, 5].shuffle.first,
-  description: Faker::Books::Dune.quote,
+  rate: (rand * (20-1) + 1).round(2),
+  description: Faker::GreekPhilosophers.quote,
   user: user_rioter
   )
-rioter_skill_1 = RioterSkill.create!(
+
+3.times do
+RioterSkill.create!(
   rioter: rioter1,
-  skill: molotov
+  skill: skill_array[0 + counter]
   )
-rioter_skill_1_1 = RioterSkill.create!(
-  rioter: rioter1,
-  skill: jacking
-  )
+counter += 1
+end
+
+skill_array = Skill.all.sample(3)
+counter = 0
 
 rioter2 = Rioter.new(
   name: Faker::Name.name,
-  rate: [1, 2, 3, 4, 5].shuffle.first,
-  description: Faker::Books::Dune.quote,
+  rate: (rand * (20-1) + 1).round(2),
+  description: Faker::GreekPhilosophers.quote,
   user: user_rioter
   )
-rioter_skill_2 = RioterSkill.create!(
+3.times do
+RioterSkill.create!(
   rioter: rioter2,
-  skill: Skill.all.sample
+  skill: skill_array[0 + counter]
   )
+counter += 1
+end
+
+skill_array = Skill.all.sample(3)
+counter = 0
 
 rioter3 = Rioter.new(
   name: Faker::Name.name,
-  rate: [1, 2, 3, 4, 5].shuffle.first,
-  description: Faker::Books::Dune.quote,
+  rate: (rand * (20-1) + 1).round(2),
+  description: Faker::Movie.quote,
   user: user_rioter
   )
-rioter_skill_3 = RioterSkill.create!(
+3.times do
+RioterSkill.create!(
   rioter: rioter3,
-  skill: Skill.all.sample
+  skill: skill_array[0 + counter]
   )
+counter += 1
+end
+
+skill_array = Skill.all.sample(3)
+counter = 0
 
 rioter4 = Rioter.new(
   name: Faker::Name.name,
-  rate: [1, 2, 3, 4, 5].shuffle.first,
-  description: Faker::Books::Dune.quote,
+  rate: (rand * (20-1) + 1).round(2),
+  description: Faker::Movie.quote,
   user: user_rioter
   )
-rioter_skill_4 = RioterSkill.create!(
+3.times do
+RioterSkill.create!(
   rioter: rioter4,
-  skill: Skill.all.sample
+  skill: skill_array[0 + counter]
   )
+counter += 1
+end
+
+skill_array = Skill.all.sample(3)
+counter = 0
 
 rioter5 = Rioter.new(
   name: Faker::Name.name,
-  rate: [1, 2, 3, 4, 5].shuffle.first,
-  description: Faker::Books::Dune.quote,
+  rate: (rand * (20-1) + 1).round(2),
+  description: Faker::Movie.quote,
   user: user_rioter
   )
-rioter_skill_5 = RioterSkill.create!(
+3.times do
+RioterSkill.create!(
   rioter: rioter5,
-  skill: Skill.all.sample
+  skill: skill_array[0 + counter]
   )
+counter += 1
+end
+
+skill_array = Skill.all.sample(3)
+counter = 0
 
 rioter6 = Rioter.new(
   name: Faker::Name.name,
-  rate: [1, 2, 3, 4, 5].shuffle.first,
-  description: Faker::Books::Dune.quote,
+  rate: (rand * (20-1) + 1).round(2),
+  description: Faker::Movie.quote,
   user: user_rioter
   )
-rioter_skill_6 = RioterSkill.create!(
+3.times do
+RioterSkill.create!(
   rioter: rioter6,
-  skill: Skill.all.sample
+  skill: skill_array[0 + counter]
   )
+counter += 1
+end
+
+skill_array = Skill.all.sample(3)
+counter = 0
 
 rioter7 = Rioter.new(
   name: Faker::Name.name,
-  rate: [1, 2, 3, 4, 5].shuffle.first,
+  rate: (rand * (20-1) + 1).round(2),
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_7 = RioterSkill.create!(
+3.times do
+RioterSkill.create!(
   rioter: rioter7,
-  skill: Skill.all.sample
+  skill: skill_array[0 + counter]
   )
+counter += 1
+end
+
+skill_array = Skill.all.sample(3)
+counter = 0
 
 rioter8 = Rioter.new(
   name: Faker::Name.name,
-  rate: [1, 2, 3, 4, 5].shuffle.first,
+  rate: (rand * (20-1) + 1).round(2),
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_8 = RioterSkill.create!(
+3.times do
+RioterSkill.create!(
   rioter: rioter8,
-  skill: Skill.all.sample
+  skill: skill_array[0 + counter]
   )
+counter += 1
+end
+
+skill_array = Skill.all.sample(3)
+counter = 0
 
 rioter9 = Rioter.new(
   name: Faker::Name.name,
-  rate: [1, 2, 3, 4, 5].shuffle.first,
+  rate: (rand * (20-1) + 1).round(2),
   description: Faker::Books::Dune.quote,
   user: user_rioter
   )
-rioter_skill_9 = RioterSkill.create!(
+3.times do
+RioterSkill.create!(
   rioter: rioter9,
-  skill: Skill.all.sample
+  skill: skill_array[0 + counter]
   )
+counter += 1
+end
 
 rioter1.remote_picture_url = 'https://i.kym-cdn.com/entries/icons/facebook/000/006/131/angry_asian.jpg'
 rioter1.save!
