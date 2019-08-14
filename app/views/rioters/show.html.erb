@@ -1,1 +1,19 @@
+<div>
+<div>
+<%=@rioter.picture%>
+</div>
+<div>
+<%=@rioter.name%>
+</div>
+</div>
 
+<h1>Book a Rioter</h1>
+<%= simple_form_for [@rioter, @booking] do |f| %>
+  <%= f.input :location %>
+  <%= f.input :start %>
+  <%= f.input :end %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to list", restaurants_path %>
