@@ -10,9 +10,11 @@
 
   <div class="card-product-infos">
     <h2> <%= rioter.name %> </h2>
-    <p> <%= rioter.description %> </p>
+    <% rioter.skills.each do |skill| %>
+      <p><%= skill.name %></p>
+    <%end%>
 
-    <h3> <strong> <%= rioter.rate %>  </strong> </h3>
+    <h3> <strong> <%= rioter.rate%>  </strong><span class="span">per hour</span></h3>
   </div>
 
 
