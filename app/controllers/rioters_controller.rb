@@ -1,6 +1,7 @@
 class RiotersController < ApplicationController
   def index
     @rioters = Rioter.all
+    render layout: "home"
   end
 
   def show
