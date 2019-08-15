@@ -7,12 +7,14 @@ a .card-product {
  align-items: center;
  color: black;
  text-align: left;
-
+ border-style: solid;
+ border-width: 1px;
+ border-color: #303030;
 }
 
 .card-product:hover {
   background-image: url(https://66.media.tumblr.com/f12f2180fac999944248c77ac48ae7f3/tumblr_prs5prwzfd1vr719go7_540.gif);
-     animation: shake 2.5s;
+     animation: shake 2s;
   animation-iteration-count: infinite;
    font-weight: bold;
      box-shadow: 0 0 15px red;
@@ -30,9 +32,6 @@ a .card-product {
  margin: 0;
 }
 
-.card-product h2:hover{
-  text-decoration: underline;
-}
 
 .card-product h3 {
  font-size: 20px;
