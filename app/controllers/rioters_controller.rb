@@ -1,11 +1,13 @@
 class RiotersController < ApplicationController
+
+  skip_before_action :authenticate_user!, only: %i[index]
   def index
     @rioters = Rioter.all
-<<<<<<< HEAD
+
     render layout: "home"
-=======
+
     @transparent_navbar = true
->>>>>>> 78d4b52f183575dfbfb7563ad4311dd76165319e
+
   end
 
   def show
