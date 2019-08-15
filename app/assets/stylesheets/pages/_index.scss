@@ -10,6 +10,10 @@
   text-align: center;
 }
 
+.move-up {
+    animation: fadeInUpBig 1.5s;
+}
+
 .margin-bottom {
   margin-bottom: 50px;
 }
@@ -22,3 +26,16 @@
   width: 74%;
 }
 
+@keyframes fadeInUpBig {
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
