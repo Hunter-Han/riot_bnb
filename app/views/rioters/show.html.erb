@@ -1,4 +1,7 @@
-<div class='background-show'>
+<div class='bgofpage'>
+<br>
+<br>
+<br>
 <div class="card-picture">
   <% if @rioter.picture %>
    <%= cl_image_tag @rioter.picture, class: "picturizer" %>
@@ -15,18 +18,17 @@
   <br>
       <h3> <strong> Price: £<%= @rioter.rate %></strong> (per hour)</h3>
         <h4><strong>Price Scale: </strong><% @rioter.rate.to_i.times do %>
-          <a href="https://www.freeiconspng.com/img/32943" title="Image from freeiconspng.com"><img class="fist" src="https://www.freeiconspng.com/uploads/fist-png-23.png" alt="Png Download Fist Clipart" /></a>
+          <img class="fist" src="https://cdn.clipart.email/092b0d0a3f11c6e8c95ca7dff9211511_power-fist-clipart_2000-2000.svg" alt="logo">
         <% end  %>
       </h4>
     </div>
 </div>
 <br>
-<br>
 
-<h1 class="cock">Book a Rioter</h1>
-<br>
+<h1 class="cock">Book&nbsp;<strong><%=@rioter.name%></strong>&nbsp;for your chosen event</h1>
+
 <div class="cock">
-<div>
+<div class="container-new-form">
 <%= simple_form_for [@rioter, @booking] do |f| %>
   <%= f.input :location %>
   <%= f.input :start %>
