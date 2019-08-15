@@ -2,15 +2,13 @@
 @import "rioter-index";
 @import "new";
 .index-page-wrapper {
-  background-color: rgba(50, 50, 50, .6);
-  width: 85%;
-  border-radius: 10px;
+  background-color: rgba(230, 230, 230, .9);
+  width: 100%;
   height: 100%;
   padding-top: 30px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 100vh;
-  margin-bottom: 10px;
+
 }
 
 .move-up {
@@ -26,10 +24,10 @@
   margin: 0 auto;
   border-bottom: 1px;
   border-bottom-style: solid;
-  border-color: white;
+  border-color: black;
   width: 74%;
   h2 {
-    color:white;
+    color:black;
     font-size: 40px
   }
 }
@@ -53,4 +51,18 @@ a {
 }
 body {
   background-color: transparent;
+}
+
+.fas.fa-chevron-down.fa-2x {
+  animation: fadeIn 5.0s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
