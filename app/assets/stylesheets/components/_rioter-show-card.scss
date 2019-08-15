@@ -1,9 +1,9 @@
 .card-picture {
   margin-top: 85px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 400px;
+  margin-right: 400px;
   overflow: hidden;
-  background: white;
+  background: rgba(230, 230, 230, .8);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   justify-content: left;
@@ -18,19 +18,33 @@
   margin-left: 20px;
   margin-right: 20px;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .fist {
-  width: 20px;
+  width: 25px;
 }
 
 .picturizer {
   height: 600px;
+  width:50%;
 }
 
 .bgofpage {
-  padding-top: 0.1px;
-  background-image: url("https://images.squarespace-cdn.com/content/v1/57e4e7a2d2b8572f42306cd9/1550393265661-1PHJHQWPQDV25QYG1BSL/ke17ZwdGBToddI8pDm48kAGx3IFADtt9koaOuly55F57gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0pTKqSDRwmMK43IUI3HojJX_iGOyvGz0VEAhzFdMwNTUP3iYIRpjRWHZRVGJwIQ0nA/image-asset.jpeg?format=2500w");
-  height: 100vh;
+  margin-top: -85px;
+  height: 123vh;
+  background-size: cover;
+  background-image: url("fire-riot.jpg")
+}
+
+.container-new-form {
+    width: 50%;
+    padding: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(230, 230, 230, .5);
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
