@@ -7,9 +7,12 @@
   text-align: center;
   padding-top: 40vh;
   background-color: transparent;
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: -100;
+  border-bottom-style: solid;
+  border-color: black;
+  border-width: 1px;
+  h1 {
+    font-style: bold;
+    font-size: 45px;
+    animation: fadeIn 2s;
+  }
 }
