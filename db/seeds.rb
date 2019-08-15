@@ -7,15 +7,21 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
+
+puts "deleting everthing"
 RioterSkill.destroy_all
 Booking.destroy_all
 Review.destroy_all
-Rioter.destroy_all
 Skill.destroy_all
+Rioter.destroy_all
 User.destroy_all
+
+puts "Creating users"
 
 user_needing_rioter = User.create!(email: 'spm471@nyu.edu', password: '123456')
 user_rioter = User.create!(email: 'sebamatera3@gmail.com', password: '123456')
+
+puts "Creating skills"
 
 molotov = Skill.new(name: 'Molotov throwing')
 jacking = Skill.new(name: 'Carjacking')
@@ -31,6 +37,9 @@ Skill.create!(name: 'Tough guy')
 
 skill_array = Skill.all.sample(3)
 counter = 0
+
+puts "Creating rioters"
+
 
 rioter1 = Rioter.new(
   name: Faker::Name.name,
@@ -183,6 +192,9 @@ RioterSkill.create!(
 counter += 1
 end
 
+puts "Addding photos to rioters"
+
+
 rioter1.remote_picture_url = 'https://i.kym-cdn.com/entries/icons/facebook/000/006/131/angry_asian.jpg'
 rioter1.save!
 
@@ -210,6 +222,8 @@ rioter8.save!
 rioter9.remote_picture_url = 'https://vote.union.ic.ac.uk/photos/aa17717-15503.jpg'
 rioter9.save!
 
+puts "Creating bookings"
+
 Booking.create(location: Faker::Address.city, start: DateTime.new(2019, 8, 1, 8), end: DateTime.new(2019, 8, 1, 17), user: user_needing_rioter, rioter: rioter1)
 
 Booking.create(location: Faker::Address.city, start: DateTime.new(2019, 8, 1, 8), end: DateTime.new(2019, 8, 1, 17), user: user_needing_rioter, rioter: rioter8)
@@ -219,3 +233,6 @@ Booking.create(location: Faker::Address.city, start: DateTime.new(2019, 8, 1, 8)
 Review.create(rating: 4, content: 'pretty good job!', user: user_needing_rioter, rioter: rioter1)
 
 Review.create(rating: 2, content: 'shit', user: user_needing_rioter, rioter: rioter1)
+
+puts "Done"
+

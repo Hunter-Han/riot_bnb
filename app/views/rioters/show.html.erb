@@ -1,4 +1,4 @@
-<div class='background-show'>
+<div class='bgofpage'>
 <div class="card-picture">
   <% if @rioter.picture %>
    <%= cl_image_tag @rioter.picture, class: "picturizer" %>
@@ -21,10 +21,9 @@
     </div>
 </div>
 <br>
-<br>
 
-<h1 class="cock">Book a Rioter</h1>
-<br>
+<h1 class="cock">Book <strong><%=@rioter.name%></strong> for your chosen event</h1>
+
 <div class="cock">
 <div>
 <%= simple_form_for [@rioter, @booking] do |f| %>
