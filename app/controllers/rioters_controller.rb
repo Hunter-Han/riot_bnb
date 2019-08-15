@@ -1,6 +1,7 @@
 class RiotersController < ApplicationController
   def index
     @rioters = Rioter.all
+    @transparent_navbar = true
   end
 
   def show
