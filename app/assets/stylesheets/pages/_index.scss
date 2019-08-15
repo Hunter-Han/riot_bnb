@@ -1,17 +1,21 @@
 // Import page-specific CSS files here.
 @import "rioter-index";
 @import "new";
-
 .index-page-wrapper {
-  background-color: rgb(230, 230, 230);
-  width: 100%;
+  background-color: rgba(50, 50, 50, .6);
+  width: 85%;
+  border-radius: 10px;
   height: 100%;
   padding-top: 30px;
   text-align: center;
+  margin: 0 auto;
+  margin-top: 100vh;
+  margin-bottom: 10px;
 }
 
 .move-up {
     animation: fadeInUpBig 1.5s;
+
 }
 
 .margin-bottom {
@@ -22,8 +26,12 @@
   margin: 0 auto;
   border-bottom: 1px;
   border-bottom-style: solid;
-  border-color: grey;
+  border-color: white;
   width: 74%;
+  h2 {
+    color:white;
+    font-size: 40px
+  }
 }
 
 @keyframes fadeInUpBig {
@@ -38,4 +46,11 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  background-color: transparent;
 }

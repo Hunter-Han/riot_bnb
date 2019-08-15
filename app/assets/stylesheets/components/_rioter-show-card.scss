@@ -1,13 +1,15 @@
 .card-picture {
-  margin-top: 85px;
-  margin-left: 400px;
-  margin-right: 400px;
+
   overflow: hidden;
   background: rgba(230, 230, 230, .8);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   justify-content: left;
-  height: 600px;
+  height: 450px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 105px;
+  border-radius: 10px;
 }
 
 .bloxy {
@@ -27,24 +29,35 @@
 }
 
 .picturizer {
-  height: 600px;
-  width:50%;
+  height: 100%;
+
 }
 
 .bgofpage {
   margin-top: -85px;
-  height: 123vh;
+  height: 100000000000px;
   background-size: cover;
-  background-image: url("fire-riot.jpg")
+  background-image: url("fire-riot.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .container-new-form {
-    width: 50%;
+    width: 70%;
     padding: 50px;
     margin-right: auto;
     margin-left: auto;
     background-color: rgba(230, 230, 230, .5);
     margin-bottom: 20px;
     margin-top: 20px;
+    border-radius: 5px;
 }
 
+.card-picture h2 {
+  text-decoration: underline;
+  font-size: 40px
+}
+
+.card-picture h4 {
+  font-size: 16px;
+}
