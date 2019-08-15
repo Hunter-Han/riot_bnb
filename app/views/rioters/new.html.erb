@@ -6,7 +6,7 @@
 
 </div>
   <div class='container-new margin-top margin-bottom' >
-    <h1> Who will you riot with...</h1>
+    <h1> Who's your rioter...</h1>
     <br>
     <%= simple_form_for [@rioter] do |f| %>
       <% if @rioter.errors.any? %>
@@ -25,7 +25,7 @@
       <%= f.input :description %>
         <div class = 'form-button-box'>
           <%= f.input :picture %>
-          <%= f.submit "submit", class: "btn btn-secondary" %>
+          <%= f.submit "LET'S RIOT", class: "form-submit-button" %>
       </div>
     <% end %>
   </div>

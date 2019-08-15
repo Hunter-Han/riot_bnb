@@ -1,6 +1,9 @@
 class RiotersController < ApplicationController
   def index
     @rioters = Rioter.all
+
+    render layout: "home"
+
     @transparent_navbar = true
   end
 
