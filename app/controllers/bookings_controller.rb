@@ -15,6 +15,11 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.rioter = Rioter.find(params[:rioter_id])
     @booking.save
+    if @booking.save
+      redirect_to bookings_path
+    else
+      redirect_to rioter_path(@booking.rioter)
+    end
   end
 
   def show
