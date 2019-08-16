@@ -1,0 +1,22 @@
+<div class="edit-background-img">
+  <div class="form-box-design-spacer"></div>
+  <div class="form-box-design">
+    <h1>Edit Rioter</h1>
+    <br>
+    <%= simple_form_for(@rioter) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br>
+      <br>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+      <br>
+      <br>
+      <%= f.label :rate %>
+      <%= f.text_field :rate %>
+      <br>
+      <br>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
