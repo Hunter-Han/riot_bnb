@@ -34,6 +34,14 @@ Skill.create!(name: 'Hates police')
 Skill.create!(name: 'Graffiti artist')
 Skill.create!(name: 'Expert marksman')
 Skill.create!(name: 'Tough guy')
+Skill.create!(name: 'Good sense of humor')
+Skill.create!(name: 'Lockpicking')
+Skill.create!(name: 'Tough guy')
+Skill.create!(name: 'No remorse')
+Skill.create!(name: 'First aid trained')
+Skill.create!(name: 'Big muscles')
+Skill.create!(name: 'Scary face')
+Skill.create!(name: 'Strong grip')
 
 skill_array = Skill.all.sample(3)
 counter = 0
@@ -226,9 +234,9 @@ puts "Creating bookings"
 
 Booking.create(location: Faker::Address.city, start: DateTime.new(2019, 8, 1, 8), end: DateTime.new(2019, 8, 1, 17), user: user_needing_rioter, rioter: rioter1)
 
-Booking.create(location: Faker::Address.city, start: DateTime.new(2019, 8, 1, 8), end: DateTime.new(2019, 8, 1, 17), user: user_needing_rioter, rioter: rioter8)
+Booking.create(location: Faker::Address.city, start: DateTime.new(2019, 8, 1, 8), end: DateTime.new(2019, 8, 1, 10), user: user_needing_rioter, rioter: rioter8)
 
-Booking.create(location: Faker::Address.city, start: DateTime.new(2019, 8, 1, 8), end: DateTime.new(2019, 8, 1, 17), user: user_needing_rioter, rioter: rioter5)
+Booking.create(location: Faker::Address.city, start: DateTime.new(2019, 8, 1, 8), end: DateTime.new(2019, 8, 1, 14), user: user_needing_rioter, rioter: rioter5)
 
 Review.create(rating: 4, content: 'pretty good job!', user: user_needing_rioter, rioter: rioter1)
 
