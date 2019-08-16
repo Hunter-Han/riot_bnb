@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   end
   resources :reviews
 
+  resources :bookings
+
 
   root to: 'rioters#index'
 
