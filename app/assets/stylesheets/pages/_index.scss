@@ -1,6 +1,9 @@
 // Import page-specific CSS files here.
 @import "rioter-index";
 @import "new";
+@import "log-in";
+@import "sign-up";
+
 .index-page-wrapper {
   background-color: rgba(230, 230, 230, .9);
   width: 100%;
