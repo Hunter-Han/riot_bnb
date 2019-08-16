@@ -32,13 +32,13 @@
 <div class="container-new-form">
 <%= simple_form_for [@rioter, @booking] do |f| %>
   <%= f.input :location %>
-  <%= f.input :start %>
-  <%= f.input :end %>
+  <%= f.input :start, as: :string, required: false, input_html: {class: "datepicker"} %>
+  <%= f.input :end, as: :string, required: false, input_html: {class: "datepicker"} %>
 
-  <%= f.submit %>
+  <%= f.submit "LET'S RIOT", class: "form-submit-button" %>
 <% end %>
 <br>
-<%= link_to "Back to list", root_path %>
+<div class='text-black'><%= link_to "Back to list", root_path %></div>
 </div>
 </div>
 </div>
