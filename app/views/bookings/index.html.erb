@@ -17,6 +17,7 @@
 </div>
 <div class="container">
   <div class="move-up">
+    <%if current_user.bookings == true%>
 <%current_user.bookings.reverse.  each do |booking|%>
   <div class="booking-card">
     <%= cl_image_tag booking.rioter.picture, class: "booking-pic"%>
@@ -31,9 +32,39 @@
       <br>
       <%= link_to "Leave a review, or book again", booking.rioter, class: "review-submit-button"%>
     </div>
-
   </div>
 <% end %>
+   <%else%>
+    <br>
+   <br>
+   <br>
+   <h1 class="booksnil">You have no bookings!</h1>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <%end%>
 </div><!-- closing row -->
 </div>
 
