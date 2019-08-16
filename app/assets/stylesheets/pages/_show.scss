@@ -1,0 +1,6 @@
+.text-black a {
+  color: black;
+  &:hover {
+    color: grey;
+  }
+}
