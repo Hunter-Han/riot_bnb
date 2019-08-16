@@ -1,0 +1,50 @@
+.booking-card {
+  background: rgba(230, 230, 230, .8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-style: solid;
+  border-color: black;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-width: 0.5px;
+  display:flex;
+  padding: 0.5px;
+  height: 170px;
+}
+
+.content-box {
+  margin: 10px;
+}
+
+.booking-background {
+  height: 100vh;
+  background-size: cover;
+  background-image: url("fire-riot.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.booking-welcome {
+  display: flex;
+  justify-content: left;
+  color: white;
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+.booking-pic  {
+ height: 100%;
+ width: 120px;
+ object-fit: cover;
+}
+
+.booking-image  {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+
+.booking-image-welcome  {
+  display: flex;
+}
