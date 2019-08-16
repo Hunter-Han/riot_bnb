@@ -1,0 +1,47 @@
+.form-post {
+  background: white;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #666666;
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+  }
+}
+
+// Checkboxes design
+.skill-choices {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.skill-choice {
+  background: #da4302;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: .4;
+  flex: 0 0 30%;
+  text-align: center;
+  &:hover {
+    transition: .5s;
+    opacity: .8;
+    background-image: url('https://media1.giphy.com/media/l0HU6CzJfxcTk5pN6/giphy.gif');
+    cursor: pointer;
+  }
+  &.active {
+  background-image: url('https://media1.giphy.com/media/3o85xJY1FaLzqeoBGw/200w.webp?cid=790b7611fa9679942142c09378bdc1b3eea82ff62eb2df18&rid=200w.webp');
+  color: white;
+  opacity: 1;
+  }
+}
