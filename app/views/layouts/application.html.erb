@@ -13,6 +13,8 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+    <!-- todo: spacer must add top margin == to the size of navbar -->
+    <div class="navbar-top-spacing"></div>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>

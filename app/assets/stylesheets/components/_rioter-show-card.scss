@@ -61,3 +61,23 @@
 .card-picture h4 {
   font-size: 16px;
 }
+
+.submit-button-rioter {
+    display:inline-block;
+    color: black;
+    font-family:arial;
+    font-size:12px;
+    font-weight:bold;
+    padding-top: 10px;
+    padding-left: 60px;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #70706f;
+    height: 50px;
+    width: 150px;
+    font-size: 12px;
+}.submit-button-rioter:hover {
+    color:#9F0441;
+}.submit-button-rioter:active {
+    position:relative;
+    top:1px;
+}

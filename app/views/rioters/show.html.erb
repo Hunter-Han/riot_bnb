@@ -22,6 +22,9 @@
         <% end  %>
       </h4>
     </div>
+    <%if @rioter.user == current_user %>
+      <%= link_to "Edit Rioter?", edit_rioter_path(@rioter), :class => 'submit-button-rioter' %>
+    <% end %>
 </div>
 <br>
 <br>

@@ -40,7 +40,11 @@ class RiotersController < ApplicationController
 
   def update
     @rioter = Rioter.find(params[:id])
-    @rioter.update(params[:rioter])
+    if @rioter.update(rioter_params)
+      redirect_to rioter_path(@rioter)
+    else
+      render :edit
+    end
   end
 
   def destroy
