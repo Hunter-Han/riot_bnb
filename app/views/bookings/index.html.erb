@@ -1,0 +1,20 @@
+<div class="booking-background">
+<br>
+<br>
+<br>
+<div class="booking-image-welcome">
+<<%=image_tag "rioter.jpg", class: "booking-image"%>>
+<h1 class="booking-welcome"><strong><%=@user.email.split("@")[0]%></h1>
+</div>
+<%@bookings.each do |booking|%>
+  <div class="booking-card">
+    <%= cl_image_tag booking.rioter.picture, class: "booking-pic"%>
+    <div class="content-box">
+      <h4><%=booking.rioter.name%>
+      <h4><%=booking.location%></h4>
+      <h4><%=booking.start%></h4>
+      <h4><%=booking.end%></h4>
+    </div>
+  </div>
+<% end %>
+<div>
