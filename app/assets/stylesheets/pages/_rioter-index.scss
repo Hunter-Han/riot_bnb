@@ -4,12 +4,16 @@
   background-size: cover;
   height: 100vh;
   color: #eee;
-  text-align: center;
   padding-top: 40vh;
   background-color: transparent;
   border-bottom-style: solid;
   border-color: black;
   border-width: 1px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
   h1 {
     font-style: bold;
     font-size: 45px;
