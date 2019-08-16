@@ -17,8 +17,8 @@
 </div>
 <div class="container">
   <div class="move-up">
-    <%if current_user.bookings == true%>
-<%current_user.bookings.reverse.  each do |booking|%>
+    <%if current_user.bookings%>
+<%current_user.bookings.each do |booking|%>
   <div class="booking-card">
     <%= cl_image_tag booking.rioter.picture, class: "booking-pic"%>
     <div class="content-box">
@@ -27,8 +27,8 @@
        <h4><strong>Date:</strong>&nbsp;<%=booking.start.to_date%></h4>
       <h4><strong>Duration:</strong>&nbsp;<%=booking.start.strftime("%I:%M %P")%>&nbsp;-&nbsp;<%=booking.end.strftime("%I:%M %P")%></h4>
       <br>
-      <h4><strong>Total rioting time:</strong>&nbsp;<%=(booking.end - booking.start)/3600%> hours</h4>
-      <h4><strong>Total cost:</strong>&nbsp;£<%=booking.rioter.rate * (booking.end - booking.start)/3600%></h4>
+      <h4><strong>Total rioting time:</strong>&nbsp;<%='%.2f' % ((booking.end - booking.start)/3600)%> hours</h4>
+      <h4><strong>Total cost:</strong>&nbsp;£<%='%.2f' % (booking.rioter.rate * (booking.end - booking.start)/3600)%></h4>
       <br>
       <%= link_to "Leave a review, or book again", booking.rioter, class: "review-submit-button"%>
     </div>
