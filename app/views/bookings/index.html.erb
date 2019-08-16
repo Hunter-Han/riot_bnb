@@ -3,18 +3,37 @@
 <br>
 <br>
 <div class="booking-image-welcome">
-<<%=image_tag "rioter.jpg", class: "booking-image"%>>
-<h1 class="booking-welcome"><strong><%=@user.email.split("@")[0]%></h1>
+<%=image_tag "rioter.jpg", class: "booking-image"%>
+<div class="welcome-info-big-box">
+<div class ="welcome-info">
+<h1>Hey</h1><h1 class="booking-welcome"><%=@user.email.split("@")[0]%>,</h1><h1>&nbsp;<strong>welcome to your bookings page! </strong></h1>
 </div>
-<%@bookings.each do |booking|%>
+<div class='welcome-info-info'>
+  <h4>Here, you can view any rioter bookings you have arranged. Unfortunately, due to the nature of our services, you cannot cancel your bookings.</h4>
+  <br>
+  <h4>Happy rioting and don't forget to leave a review!</h4>
+</div>
+</div>
+</div>
+<div class="container">
+  <div class="move-up">
+<%current_user.bookings.reverse.  each do |booking|%>
   <div class="booking-card">
     <%= cl_image_tag booking.rioter.picture, class: "booking-pic"%>
     <div class="content-box">
-      <h4><%=booking.rioter.name%>
-      <h4><%=booking.location%></h4>
-      <h4><%=booking.start%></h4>
-      <h4><%=booking.end%></h4>
+      <h1><strong><u><%=booking.rioter.name%></u></strong></h1>
+      <h4><strong>Location:</strong>&nbsp;<%=booking.location%></h4>
+       <h4><strong>Date:</strong>&nbsp;<%=booking.start.to_date%></h4>
+      <h4><strong>Duration:</strong>&nbsp;<%=booking.start.strftime("%I:%M %P")%>&nbsp;-&nbsp;<%=booking.end.strftime("%I:%M %P")%></h4>
+      <br>
+      <h4><strong>Total rioting time:</strong>&nbsp;<%=(booking.end - booking.start)/3600%> hours</h4>
+      <h4><strong>Total cost:</strong>&nbsp;£<%=booking.rioter.rate * (booking.end - booking.start)/3600%></h4>
+      <br>
+      <%= link_to "Leave a review, or book again", booking.rioter, class: "review-submit-button"%>
     </div>
+
   </div>
 <% end %>
-<div>
+</div><!-- closing row -->
+</div>
+

@@ -16,7 +16,7 @@
       <h4><%= skill.name %></h4>
     <%end%>
   <br>
-      <h3> <strong> Price: £<%= @rioter.rate %></strong> (per hour)</h3>
+      <h3> <strong> Hourly price: £<%= @rioter.rate %></strong></h3>
         <h4><strong>Price Scale: </strong><% @rioter.rate.to_i.times do %>
           <img class="fist" src="https://cdn.clipart.email/092b0d0a3f11c6e8c95ca7dff9211511_power-fist-clipart_2000-2000.svg" alt="logo">
         <% end  %>
