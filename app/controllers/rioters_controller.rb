@@ -22,11 +22,12 @@ class RiotersController < ApplicationController
 
   def create
     @rioter = Rioter.new(rioter_params)
-
     @rioter.user = current_user
     if @rioter.save
-        skill = Skill.find(params[:rioter][:skill_ids].last.to_i)
+      skills = Skill.find(params[:post][:skill_ids])
+      skills.each do |skill|
         RioterSkill.create(rioter: @rioter, skill: skill)
+      end
       redirect_to root_path(@rioter)
     else
       render :new
@@ -49,6 +50,7 @@ class RiotersController < ApplicationController
   end
 
   def rioter_params
+    # params.require(:rioter).permit(:name, :rate, :picture, :description, skill_ids: [])
     params.require(:rioter).permit(:name, :rate, :picture, :description, :skill_ids)
   end
 end
